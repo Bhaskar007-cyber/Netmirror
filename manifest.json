@@ -1,7 +1,11 @@
 {
+  "name": "NetMirror Repo",
+  "version": "1.0.0",
+  "scrapers": [
+    {
       "id": "netmirror",
       "name": "Netmirror",
-      "description": "Auto-generated description for Netmirror",
+      "description": "NetMirror provider",
       "version": "1.0.0",
       "author": "Michat88",
       "supportedTypes": [
@@ -18,4 +22,6 @@
       "contentLanguage": [
         "en"
       ]
-    },
+    }
+  ]
+}
