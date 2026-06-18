@@ -1,30 +1,37 @@
 name: Sync NetMirror
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'   # every 6 hours
-  workflow_dispatch:
+schedule:
+- cron: '0 */6 * * *'
+workflow_dispatch:
 
 jobs:
-  sync:
-    runs-on: ubuntu-latest
+sync:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout your repository
-        uses: actions/checkout@v4
+```
+permissions:
+  contents: write
 
-     - name: Download latest netmirror.js
-  run: |
-    mkdir -p providers
-    curl -L https://raw.githubusercontent.com/D3adlyRocket/All-in-One-Nuvio/main/providers/netmirror.js -o providers/netmirror.js
+steps:
+  - name: Checkout your repository
+    uses: actions/checkout@v4
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add providers/netmirror.js
-          git diff --cached --quiet || git commit -m "Auto update NetMirror"
+  - name: Download latest netmirror.js
+    run: |
+      mkdir -p providers
+      curl -L \
+        https://raw.githubusercontent.com/D3adlyRocket/All-in-One-Nuvio/main/providers/netmirror.js \
+        -o providers/netmirror.js
 
-      - name: Push changes
-        run: |
-          git push
+  - name: Commit changes
+    run: |
+      git config user.name "github-actions"
+      git config user.email "github-actions@github.com"
+      git add providers/netmirror.js
+      git diff --cached --quiet || git commit -m "Auto update NetMirror"
+
+  - name: Push changes
+    run: |
+      git push
+```
