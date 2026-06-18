@@ -13,11 +13,10 @@ jobs:
       - name: Checkout your repository
         uses: actions/checkout@v4
 
-      - name: Download latest netmirror.js
-        run: |
-          mkdir -p providers
-          curl -L \
-         https://github.com/D3adlyRocket/All-in-One-Nuvio/blob/main/providers/netmirror.js
+     - name: Download latest netmirror.js
+  run: |
+    mkdir -p providers
+    curl -L https://raw.githubusercontent.com/D3adlyRocket/All-in-One-Nuvio/main/providers/netmirror.js -o providers/netmirror.js
 
       - name: Commit changes
         run: |
