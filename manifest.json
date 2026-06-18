@@ -4,24 +4,16 @@
   "scrapers": [
     {
       "id": "netmirror",
-      "name": "Netmirror",
-      "description": "NetMirror provider",
+      "name": "NetMirror",
+      "description": "Netflix | Prime | Disney",
       "version": "1.0.0",
-      "author": "Michat88",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
+      "author": "Dustincos",
+      "supportedTypes": ["movie", "tv"],
       "filename": "providers/netmirror.js",
       "enabled": true,
-      "formats": [
-        "mp4",
-        "m3u8"
-      ],
-      "logo": "https://via.placeholder.com/150",
-      "contentLanguage": [
-        "en"
-      ]
+      "formats": ["mp4", "m3u8", "mkv"],
+      "logo": "https://i.postimg.cc/L64M3bYV/netmirror.png",
+      "contentLanguage": ["en", "hi", "ta", "te"]
     }
   ]
 }
