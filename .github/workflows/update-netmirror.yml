@@ -9,12 +9,11 @@ jobs:
 sync:
 runs-on: ubuntu-latest
 
-```
 permissions:
   contents: write
 
 steps:
-  - name: Checkout your repository
+  - name: Checkout repository
     uses: actions/checkout@v4
 
   - name: Download latest netmirror.js
@@ -33,5 +32,4 @@ steps:
 
   - name: Push changes
     run: |
-      git push
-```
+      git push origin main
