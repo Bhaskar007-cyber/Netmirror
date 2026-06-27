@@ -4,7 +4,7 @@
   "scrapers": [
     {
       "id": "netmirror",
-      "name": "NetMirror",
+      "name": "OTT Search",
       "description": "Netflix | Prime | Disney",
       "version": "1.0.0",
       "author": "Dustincos",
