@@ -19,9 +19,7 @@ steps:
   - name: Download latest netmirror.js
     run: |
       mkdir -p providers
-      curl -L \
-        https://raw.githubusercontent.com/D3adlyRocket/All-in-One-Nuvio/main/providers/netmirror.js \
-        -o providers/netmirror.js
+      curl -L "https://raw.githubusercontent.com/D3adlyRocket/All-in-One-Nuvio/main/providers/netmirror.js" -o providers/netmirror.js
 
   - name: Commit changes
     run: |
